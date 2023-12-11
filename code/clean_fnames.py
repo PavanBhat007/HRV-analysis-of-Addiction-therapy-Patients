@@ -1,8 +1,8 @@
 import os
 import encrypter
 
-BASE_PATH_CONTROL = "D:\dev\PROJECTS\ECG-Analysis-SP2\Dataset\data\control"
-BASE_PATH_ALCOHOLIC = "D:\dev\PROJECTS\ECG-Analysis-SP2\Dataset\data\\alcoholic"
+BASE_PATH_CONTROL = "Dataset\data\control"
+BASE_PATH_ALCOHOLIC = "Dataset\data\\alcoholic"
 
 def clean_file_names(dir):
     for _, filename in enumerate(os.listdir(dir)):

@@ -4,12 +4,9 @@ import neurokit2 as nk
 
 from get_metrics import get_rr_intervals, calc_mean_RR, calc_std_dev_RR, calc_rms_RR, calc_mean_HR, calc_std_dev_HR, calc_rmssd
 
-pd.set_option('display.max_columns', None) #display all columns
-pd.set_option('display.max_rows', None) #display all rows
-
 CHANNELS = 2
-BASE_PATH_CONTROL = "D:\dev\PROJECTS\ECG-Analysis-SP2\Dataset\data\control"
-BASE_PATH_ALCOHOLIC = "D:\dev\PROJECTS\ECG-Analysis-SP2\Dataset\data\\alcoholic"
+BASE_PATH_CONTROL = "Dataset\data\control"
+BASE_PATH_ALCOHOLIC = "Dataset\data\\alcoholic"
 COLUMNS = ['Name', 'Age', 'Gender', 'Mean_RR', 'STD_RR', 'RMS_RR', 'Mean_HR', 'STD_HR', 'RMSSD', 'Status']
 
 def extract_data(filepath):
@@ -67,4 +64,4 @@ def analyze_ecg(filepath):
         
     return record
 
-print(analyze_ecg(f"{BASE_PATH_ALCOHOLIC}\\Pintu-31-M.adicht"))
+# print(analyze_ecg(f"{BASE_PATH_ALCOHOLIC}\\Pintu-31-M.adicht"))
