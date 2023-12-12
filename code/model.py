@@ -5,7 +5,7 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 
-from datetime import datetime
+import time
 
 from analysis_script import analyze_ecg
 
@@ -22,7 +22,7 @@ def model_tuning(X, y, params):
         estimator=rfc,
         param_grid=params,
         scoring="neg_mean_absolute_error",
-        cv=3,
+        cv=2,
         return_train_score=True,
         verbose=1,
         n_jobs=-1,
@@ -97,13 +97,13 @@ def take_inp(filepath):
 if __name__ == "__main__":
     take_inp(f"{BASE_PATH_ALCOHOLIC}/Pintu-31-M.adicht")
 
+    t1 = time.time()
     accuracy, y_pred = model_training()
     # while accuracy <= 0.8:
     #     accuracy, y_pred = model_training()
 
-    t1 = datetime.utcnow()
     prediction = get_predictions(FILEPATH)
-    t2 = datetime.utcnow()
+    t2 = time.time()
     
     print(f"Completed in {t2-t1}\t\t Accuracy: {accuracy}")
     
