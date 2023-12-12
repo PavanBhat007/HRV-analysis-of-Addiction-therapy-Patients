@@ -16,3 +16,11 @@ This is a repository for storing a team-project based on ECG Data analysis done 
 
 ----- results<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-----> ecg.csv <br/>
+
+## Libraries needed
+- pip install adi-reader
+- pip install requests
+- pip install neurokit2
+- pip install pandas, numpy, scikit-learn, seaborn, matplotlib
+- pip install cryptography
+- pip install ipykernel
