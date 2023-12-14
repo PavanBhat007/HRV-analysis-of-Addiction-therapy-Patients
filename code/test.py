@@ -1,6 +1,4 @@
-from datetime import datetime
-t1 = datetime.utcnow()
-for i in range(100000):
-    print(i)
-t2 = datetime.utcnow()
-print(t2-t1)
+t = tuple([1, [1,2,3,4,5]])
+
+p, l = t
+print(p, l)

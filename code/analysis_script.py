@@ -63,5 +63,3 @@ def analyze_ecg(filepath):
     ]
         
     return record
-
-# print(analyze_ecg(f"{BASE_PATH_ALCOHOLIC}\\Pintu-31-M.adicht"))
