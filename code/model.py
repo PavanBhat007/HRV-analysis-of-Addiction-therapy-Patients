@@ -1,14 +1,13 @@
 import pandas as pd
 import joblib
 import os
-import time
 import sys
 import json
 from analysis_script import analyze_ecg
 
 BASE_PATH = "../results/"
-BASE_PATH_CONTROL = "Dataset/data/control"
-BASE_PATH_ALCOHOLIC = "Dataset/data/alcoholic"
+BASE_PATH_CONTROL = "../Dataset/data/control"
+BASE_PATH_ALCOHOLIC = "../Dataset/data/alcoholic"
 FILEPATH = ""
 
 
@@ -26,7 +25,7 @@ def get_predictions(filepath):
     }
     rr_stats.loc[len(rr_stats)] = params
 
-    model = joblib.load('results/model-79.joblib')
+    model = joblib.load(f'{BASE_PATH}model-79.joblib')
     y_pred = model.predict(rr_stats)
     
     return tuple([y_pred, params])
