@@ -1,6 +1,6 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request
 from model import start
-
+import json
 
 app = Flask(__name__)
 
@@ -10,9 +10,8 @@ def return_pred():
     
     patient_name = request.args['query']
     preds = start(patient_name=patient_name)
-    
-    print(preds)
-    d['output'] = preds
+
+    d['output'] = json.loads(preds)
     return d
 
 
